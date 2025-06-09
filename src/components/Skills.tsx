@@ -3,17 +3,25 @@ import { Progress } from "@/components/ui/progress";
 
 export const Skills = () => {
   const skills = [
-    { name: "React/Next.js", level: 95 },
-    { name: "TypeScript", level: 90 },
-    { name: "Node.js", level: 85 },
+    { name: "Java & Spring Boot", level: 90 },
+    { name: "JavaScript & Node.js", level: 85 },
+    { name: "HTML/CSS", level: 88 },
     { name: "Python", level: 80 },
-    { name: "UI/UX Design", level: 85 },
-    { name: "Database Design", level: 80 },
+    { name: "C++", level: 85 },
+    { name: "SQL", level: 82 },
+  ];
+
+  const frameworks = [
+    "Spring Boot", "Spring MVC", "Express.js", "Node.js"
   ];
 
   const tools = [
-    "React", "Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL",
-    "MongoDB", "AWS", "Docker", "Figma", "Git", "Tailwind CSS"
+    "Git", "GitHub", "Postman", "Maven", "AWS EC2", "AWS S3", 
+    "AWS Lambda", "CloudFormation", "VPC", "IAM"
+  ];
+
+  const databases = [
+    "MySQL", "MongoDB"
   ];
 
   return (
@@ -21,12 +29,12 @@ export const Skills = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Skills & Expertise
+            Technical Skills
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 mb-12">
             <div>
-              <h3 className="text-2xl font-semibold mb-8">Technical Skills</h3>
+              <h3 className="text-2xl font-semibold mb-8">Programming Languages</h3>
               <div className="space-y-6">
                 {skills.map((skill, index) => (
                   <div key={index}>
@@ -41,38 +49,76 @@ export const Skills = () => {
             </div>
             
             <div>
-              <h3 className="text-2xl font-semibold mb-8">Tools & Technologies</h3>
-              <div className="flex flex-wrap gap-3">
+              <h3 className="text-2xl font-semibold mb-8">Profile Links</h3>
+              <div className="space-y-4 mb-8">
+                <a 
+                  href="https://linkedin.com/in/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 bg-muted rounded-lg hover:bg-primary/10 transition-colors duration-200"
+                >
+                  <span className="font-medium text-primary">LinkedIn Profile →</span>
+                </a>
+                <a 
+                  href="https://leetcode.com/your-username"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 bg-muted rounded-lg hover:bg-primary/10 transition-colors duration-200"
+                >
+                  <span className="font-medium text-primary">LeetCode Profile →</span>
+                </a>
+                <a 
+                  href="https://geeksforgeeks.org/user/your-username"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 bg-muted rounded-lg hover:bg-primary/10 transition-colors duration-200"
+                >
+                  <span className="font-medium text-primary">GeeksforGeeks Profile →</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Frameworks</h4>
+              <div className="flex flex-wrap gap-2">
+                {frameworks.map((framework, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-muted rounded-full text-sm font-medium hover:bg-primary/10 transition-colors duration-200"
+                  >
+                    {framework}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Tools & Cloud</h4>
+              <div className="flex flex-wrap gap-2">
                 {tools.map((tool, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-muted rounded-full text-sm font-medium hover:bg-primary/10 transition-colors duration-200"
+                    className="px-3 py-1 bg-muted rounded-full text-sm font-medium hover:bg-primary/10 transition-colors duration-200"
                   >
                     {tool}
                   </span>
                 ))}
               </div>
-              
-              <div className="mt-8">
-                <h4 className="text-lg font-semibold mb-4">What I Bring</h4>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    5+ years of full-stack development experience
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    Strong problem-solving and analytical skills
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    Experience with agile development methodologies
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    Passion for learning and staying updated with latest technologies
-                  </li>
-                </ul>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Databases</h4>
+              <div className="flex flex-wrap gap-2">
+                {databases.map((db, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-muted rounded-full text-sm font-medium hover:bg-primary/10 transition-colors duration-200"
+                  >
+                    {db}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
