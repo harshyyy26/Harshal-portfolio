@@ -30,19 +30,19 @@ export const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "john@example.com",
-      link: "mailto:john@example.com"
+      value: "harshlgiri321@gmail.com",
+      link: "mailto:harshlgiri321@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+91 7420810345",
+      link: "tel:+917420810345"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Pune, India",
       link: "#"
     }
   ];
@@ -134,7 +134,7 @@ export const Contact = () => {
       </div>
       
       <div className="mt-20 pt-8 border-t border-border text-center text-muted-foreground">
-        <p>&copy; 2024 John Doe. All rights reserved.</p>
+        <p>&copy; 2024 Harshal Giri. All rights reserved.</p>
       </div>
     </section>
   );

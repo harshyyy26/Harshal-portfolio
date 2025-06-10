@@ -1,6 +1,7 @@
 
 import { GraduationCap, Award, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import meImage from 'D:\Data\projects\PortfolioWebsite\your-digital-story-67\public\me.JPG';
 
 export const About = () => {
   const education = [
@@ -27,29 +28,23 @@ export const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             About Me
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                I'm a passionate Computer Engineering student at MIT Academy of Engineering 
-                with a strong foundation in full-stack development. Currently maintaining 
-                a CGPA of 8.59, I specialize in modern web technologies and backend development.
+                I’m a B.Tech Computer Science student who enjoys building applications using C++, Java, and Spring Boot. I’ve worked on projects involving secure, database-driven apps and have a solid understanding of data structures, algorithms, SQL, and MongoDB. I recently completed a cloud computing certification through NPTEL, where I learned about cloud architecture and serverless technologies. I’m excited to find an internship where I can put these skills to work and keep learning.
               </p>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                My journey includes building comprehensive web applications, learning cloud 
-                technologies, and obtaining industry certifications. I'm particularly interested 
-                in creating scalable solutions and exploring new technologies.
-              </p>
-              <div className="flex items-center text-muted-foreground mb-4">
-                <MapPin className="h-5 w-5 mr-2 text-primary" />
-                <span>Pune, Maharashtra 412105</span>
-              </div>
             </div>
-            
+
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center">
-                <div className="text-6xl">👨‍💻</div>
+              <div className="aspect-square overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center">
+                <img
+                  src="/me.JPG"
+                  alt="Harshal Giri"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
+
             </div>
           </div>
 
@@ -80,7 +75,8 @@ export const About = () => {
 
           <div>
             <h3 className="text-2xl font-semibold mb-8 text-center">Certifications</h3>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* CCNA Card */}
               <Card className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
@@ -88,8 +84,8 @@ export const About = () => {
                   </div>
                   <h4 className="text-lg font-semibold mb-2">CCNA: Introduction to Networks</h4>
                   <p className="text-muted-foreground mb-4">Foundational understanding of networking concepts</p>
-                  <a 
-                    href="#" 
+                  <a
+                    href="https://drive.google.com/file/d/1eF90VrchwpULu0_l2IV4_vz1zpL32KZY/view?usp=sharing"
                     className="text-primary hover:underline text-sm"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -98,7 +94,8 @@ export const About = () => {
                   </a>
                 </CardContent>
               </Card>
-              
+
+              {/* NPTEL Card */}
               <Card className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
@@ -106,8 +103,27 @@ export const About = () => {
                   </div>
                   <h4 className="text-lg font-semibold mb-2">NPTEL: Cloud Computing</h4>
                   <p className="text-muted-foreground mb-4">Core concepts of cloud computing and applications</p>
-                  <a 
-                    href="#" 
+                  <a
+                    href="https://drive.google.com/file/d/1Qr7HgkbMBv0XfXwpkNO_ISiUFuUongKZ/view?usp=drive_link"
+                    className="text-primary hover:underline text-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Certificate →
+                  </a>
+                </CardContent>
+              </Card>
+
+              {/* Cisco C++ Card */}
+              <Card className="hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
+                    <Award className="h-6 w-6 text-primary" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2">Cisco: Programming Essentials in C++</h4>
+                  <p className="text-muted-foreground mb-4">Gained foundational skills in C++ and object-oriented programming</p>
+                  <a
+                    href="https://drive.google.com/file/d/1Lnd6__-sFpfYXZTc1GD0NYR0f7B1PesL/view?usp=sharing"
                     className="text-primary hover:underline text-sm"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -117,6 +133,7 @@ export const About = () => {
                 </CardContent>
               </Card>
             </div>
+
           </div>
         </div>
       </div>

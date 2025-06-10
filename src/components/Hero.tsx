@@ -1,4 +1,3 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -26,46 +25,22 @@ export const Hero = () => {
             Passionate about creating innovative web solutions and building scalable applications. 
             Currently pursuing B.Tech in Computer Engineering with expertise in modern web technologies.
           </p>
-          <p className="text-md text-muted-foreground mb-12">
-            📍 Pune, Maharashtra | 📞 +91 7420810345 | 📧 harshlgiri321@gmail.com
-          </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Button size="lg" className="group" onClick={scrollToAbout}>
               View My Work
               <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg">
-              Download CV
+            <Button variant="outline" size="lg" asChild>
+              <a
+                href="https://drive.google.com/file/d/1iXUjvsCOTiWjjeZGygYnmVT_atb0FAUR/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download CV
+              </a>
             </Button>
-          </div>
 
-          <div className="flex items-center justify-center space-x-6">
-            <a
-              href="https://linkedin.com/in/your-profile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200 hover:scale-110 transform"
-              title="LinkedIn Profile"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href="https://github.com/your-username"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200 hover:scale-110 transform"
-              title="GitHub Profile"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="mailto:harshlgiri321@gmail.com"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200 hover:scale-110 transform"
-              title="Email"
-            >
-              <Mail size={24} />
-            </a>
           </div>
         </div>
       </div>

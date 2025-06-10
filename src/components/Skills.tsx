@@ -3,12 +3,10 @@ import { Progress } from "@/components/ui/progress";
 
 export const Skills = () => {
   const skills = [
-    { name: "Java & Spring Boot", level: 90 },
-    { name: "JavaScript & Node.js", level: 85 },
-    { name: "HTML/CSS", level: 88 },
-    { name: "Python", level: 80 },
-    { name: "C++", level: 85 },
-    { name: "SQL", level: 82 },
+    { name: "Java & Spring Boot"},
+    { name: "HTML/CSS"},
+    { name: "C++"},
+    { name: "SQL"},
   ];
 
   const frameworks = [
@@ -40,9 +38,8 @@ export const Skills = () => {
                   <div key={index}>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-medium">{skill.name}</span>
-                      <span className="text-muted-foreground">{skill.level}%</span>
                     </div>
-                    <Progress value={skill.level} className="h-2" />
+                    {/* <Progress value={skill.level} className="h-2" /> */}
                   </div>
                 ))}
               </div>
@@ -52,7 +49,7 @@ export const Skills = () => {
               <h3 className="text-2xl font-semibold mb-8">Profile Links</h3>
               <div className="space-y-4 mb-8">
                 <a 
-                  href="https://linkedin.com/in/your-profile"
+                  href="https://www.linkedin.com/in/harshal-giri-a8155b2a7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block p-4 bg-muted rounded-lg hover:bg-primary/10 transition-colors duration-200"
@@ -60,7 +57,7 @@ export const Skills = () => {
                   <span className="font-medium text-primary">LinkedIn Profile →</span>
                 </a>
                 <a 
-                  href="https://leetcode.com/your-username"
+                  href="https://leetcode.com/harshyyy26"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block p-4 bg-muted rounded-lg hover:bg-primary/10 transition-colors duration-200"
@@ -68,12 +65,12 @@ export const Skills = () => {
                   <span className="font-medium text-primary">LeetCode Profile →</span>
                 </a>
                 <a 
-                  href="https://geeksforgeeks.org/user/your-username"
+                  href="https://github.com/harshyyy26"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block p-4 bg-muted rounded-lg hover:bg-primary/10 transition-colors duration-200"
                 >
-                  <span className="font-medium text-primary">GeeksforGeeks Profile →</span>
+                  <span className="font-medium text-primary">Github Profile →</span>
                 </a>
               </div>
             </div>
