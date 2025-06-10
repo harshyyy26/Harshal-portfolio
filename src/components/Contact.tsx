@@ -54,16 +54,16 @@ export const Contact = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Let's Work Together
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                I'm always interested in new opportunities and exciting projects. 
-                Whether you have a question or just want to say hi, feel free to 
+                I'm always interested in new opportunities and exciting projects.
+                Whether you have a question or just want to say hi, feel free to
                 reach out!
               </p>
-              
+
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-center space-x-4">
@@ -83,13 +83,18 @@ export const Contact = () => {
                 ))}
               </div>
             </div>
-            
+
             <Card>
               <CardHeader>
                 <CardTitle>Send Message</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  action="https://formsubmit.co/harshlgiri321@gmail.com"
+                  method="POST"
+                  className="space-y-6"
+                >
+
                   <div>
                     <Input
                       name="name"
@@ -99,7 +104,7 @@ export const Contact = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <Input
                       name="email"
@@ -110,7 +115,7 @@ export const Contact = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <Textarea
                       name="message"
@@ -121,7 +126,7 @@ export const Contact = () => {
                       required
                     />
                   </div>
-                  
+
                   <Button type="submit" className="w-full group">
                     Send Message
                     <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -132,7 +137,7 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="mt-20 pt-8 border-t border-border text-center text-muted-foreground">
         <p>&copy; 2024 Harshal Giri. All rights reserved.</p>
       </div>
