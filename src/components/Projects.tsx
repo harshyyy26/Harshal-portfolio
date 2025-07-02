@@ -17,7 +17,7 @@ export const Projects = () => {
         "Password reset via secure email token (Gmail SMTP)",
         "Responsive UI with shadcn/ui and Tailwind CSS"
       ],
-      githubUrl: "https://github.com/harshyyy26/Quiz-App.git" // Replace with actual repo if different
+      githubUrl: "https://github.com/harshyyy26/QuizApp.git" // Replace with actual repo if different
     }
     ,
     {
