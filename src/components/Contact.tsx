@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
+import emailjs from 'emailjs-com';
+
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,10 +16,27 @@ export const Contact = () => {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
-  };
+  e.preventDefault();
+
+  emailjs.send(
+    "service_i8stlgn",     // 🔁 Replace with your actual Service ID
+    "template_p9suwyj",    // 🔁 Replace with your Template ID
+    {
+      name: formData.name,       // these match your EmailJS template variables
+      email: formData.email,
+      message: formData.message,
+      title: "Contact from Portfolio"  // optional: if your template uses {{title}}
+    },
+    "10l6caeAfT3qI_lGj"     // 🔁 Replace with your EmailJS Public Key
+  ).then(() => {
+    alert("✅ Message sent successfully!");
+    setFormData({ name: "", email: "", message: "" }); // clear form
+  }).catch((error) => {
+    console.error("❌ EmailJS Error:", error);
+    alert("⚠️ Failed to send message. Try again later.");
+  });
+};
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -89,11 +108,8 @@ export const Contact = () => {
                 <CardTitle>Send Message</CardTitle>
               </CardHeader>
               <CardContent>
-                <form
-                  action="https://formsubmit.co/harshlgiri321@gmail.com"
-                  method="POST"
-                  className="space-y-6"
-                >
+                <form onSubmit={handleSubmit} className="space-y-6">
+
 
                   <div>
                     <Input

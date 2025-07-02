@@ -1,7 +1,8 @@
 
 import { GraduationCap, Award, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import meImage from 'D:\Data\projects\PortfolioWebsite\your-digital-story-67\public\me.JPG';
+// import meImage from 'D:\Data\projects\PortfolioWebsite\your-digital-story-67\public\me.JPG';
+// import me from "@/public/me.JPG"; // Adjust the import path as necessary
 
 export const About = () => {
   const education = [

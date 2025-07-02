@@ -5,16 +5,21 @@ import { Button } from "@/components/ui/button";
 export const Projects = () => {
   const projects = [
     {
-      title: "Web Enabled Online Learning Platform",
-      description: "Built a comprehensive platform for course access and college related study materials. Designed responsive UI and developed secure backend with user registration, course management, and authentication features.",
-      technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "MySQL"],
+      title: "Online Quiz Application",
+      description: "A full-stack quiz platform built with Spring Boot and React, supporting multi-user authentication, quiz management, scoring, leaderboards, and secure password reset via email. Users can attempt quizzes and track their performance, while admins can manage quizzes, questions, and users.",
+      technologies: ["React", "Vite", "Tailwind CSS", "Spring Boot", "MongoDB Atlas", "JWT", "Gmail SMTP"],
       features: [
-        "Course and study material access",
-        "User registration and authentication",
-        "Secure data handling with MySQL"
+        "User and admin signup/login with role-based access",
+        "JWT authentication and secure logout with token blacklisting",
+        "Quiz and question management (CRUD) by admins",
+        "Quiz attempt tracking with score calculation",
+        "User quiz history and leaderboard per quiz",
+        "Password reset via secure email token (Gmail SMTP)",
+        "Responsive UI with shadcn/ui and Tailwind CSS"
       ],
-      githubUrl: "https://github.com/harshyyy26/WebEnabledLearningPlatform"
-    },
+      githubUrl: "https://github.com/harshyyy26/Quiz-App.git" // Replace with actual repo if different
+    }
+    ,
     {
       title: "Journal Application",
       description: "Developed a Spring Boot-based journal application with full CRUD operations. Integrated Spring Data JPA with MongoDB and implemented secure authentication using Spring Security.",
