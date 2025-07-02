@@ -10,7 +10,7 @@ export const About = () => {
       icon: GraduationCap,
       institution: "MIT Academy of Engineering",
       degree: "Bachelor of Technology in Computer Engineering",
-      grade: "CGPA: 8.59",
+      grade: "CGPA: 8.64",
       status: "Current"
     },
     {
